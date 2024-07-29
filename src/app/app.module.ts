@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import { NgOptimizedImage } from '@angular/common';
+import { NgOptimizedImageModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -13,7 +13,7 @@ import { NgOptimizedImage } from '@angular/common';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgOptimizedImage
+    NgOptimizedImageModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
