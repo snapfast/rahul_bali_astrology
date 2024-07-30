@@ -4,7 +4,7 @@ describe('empty spec', () => {
   })
 
   it('displays the resources text', () => {
-    cy.get('h1')
+    cy.get('h2')
     .contains('Vedic Jyotish');
   })
   // it('renders the image', () => {
