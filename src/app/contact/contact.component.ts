@@ -15,5 +15,4 @@ export class ContactComponent {
       console.log('Form data:', this.userForm.value);
     }
   }
-
 }
