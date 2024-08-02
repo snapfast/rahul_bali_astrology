@@ -5,7 +5,7 @@ import { ConsultationComponent } from './consultation/consultation.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'consultation', component: ConsultationComponent },
+  { path: '/consultation', component: ConsultationComponent },
 ];
 
 @NgModule({
