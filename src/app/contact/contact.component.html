@@ -13,7 +13,9 @@
 
 
 <div class="forms">
-  <form [formGroup]="form" (ngSubmit)="onSubmit()">
-    <input type="text" class="form-control" id="name" required [(ngModel)]="model.name" name="name">
+  <!-- <form [formGroup]="form" (ngSubmit)="onSubmit()"> -->
+  <form (ngSubmit)="onSubmit()">
+    <!-- <input type="text" class="form-control" id="name" required [(ngModel)]="model.name" name="name"> -->
+    <input type="text" class="form-control" id="name" required name="name">
   </form>
 </div>
