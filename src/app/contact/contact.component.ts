@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { Form } from '@angular'
 
 @Component({
   selector: 'contact',
