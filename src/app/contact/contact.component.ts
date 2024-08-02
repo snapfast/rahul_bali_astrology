@@ -10,8 +10,8 @@ export class ContactComponent {
   form: any;
 
   onSubmit(): void {
-    if (this.userForm?.valid) {
-      console.log('Form data:', this.userForm.value);
+    if (this.form?.valid) {
+      console.log('Form data:', this.form.value);
     }
   }
 }
