@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Form } from '@angular'
 
 @Component({
   selector: 'contact',
@@ -7,4 +8,12 @@ import { Component } from '@angular/core';
 })
 export class ContactComponent {
   title = 'rahul-bali-astrology';
+  form: any;
+
+  onSubmit(): void {
+    if (this.userForm?.valid) {
+      console.log('Form data:', this.userForm.value);
+    }
+  }
+
 }
