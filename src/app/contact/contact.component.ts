@@ -5,6 +5,6 @@ import { Component } from '@angular/core';
   templateUrl: './consultation.component.html',
   styleUrls: ['./consultation.component.css'],
 })
-export class ConsultationComponent {
+export class ContactComponent {
   title = 'rahul-bali-astrology';
 }
