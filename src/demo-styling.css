@@ -139,14 +139,12 @@ footer img {
   width: 20px;
 }
 
-
 .email-input-container {
-  max-width: 400px;
-  width: 100%;
   margin: 20px;
 }
 
 .email-input {
+  min-width: 380px;
   padding: 12px 15px;
   border: 2px solid #ccc;
   border-radius: 8px;
