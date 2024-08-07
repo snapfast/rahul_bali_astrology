@@ -1,9 +1,6 @@
-import { Component } from '@angular/core';
-
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Subject, timer } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
-
 
 @Component({
   selector: 'consultation',
