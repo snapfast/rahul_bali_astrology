@@ -9,7 +9,7 @@ import { takeUntil } from 'rxjs/operators';
 })
 export class ConsultationComponent implements OnInit, OnDestroy {
   public remainingTime: string = '00:00';
-  private endTime: Date;
+  private endTime: Date | null = null; // Initialize to null
   private destroy$: Subject<boolean> = new Subject<boolean>();
 
   ngOnInit() {
