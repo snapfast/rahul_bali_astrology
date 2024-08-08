@@ -63,7 +63,7 @@ body{
   width: 60%;
   margin: 0 auto;
   padding-bottom: 5%;
-  font-weight: 100;
+  font-weight: 50;
 }
 
 @media only screen and (max-width: 450px) {
