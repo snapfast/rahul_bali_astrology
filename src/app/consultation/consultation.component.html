@@ -2,22 +2,9 @@
   With Vedic Jyotish, find Clarity and Purpose: Balancing your Goals with the Intricate Dance of Fate and Karma.
 </h3>
 
-<div *ngIf="loading; else qr">
-  <mat-spinner mode="indeterminate"></mat-spinner>
-</div>
-
-<ng-template #qr>
-
-  <img src="https://raw.githubusercontent.com/snapfast/rahul_bali_astrology/main/src/app/img/PhonePeQR.png"
-    width="300px">
-  <div class="timer-container">
-    <h4>Time Left: {{ remainingTime }}</h4>
-    <p>Please scan QR code using any UPI app.</p><small>Add your email in the UPI remarks for tracking purpose.</small>
-    <p>Once payment done, click "Next" below for booking page.</p>
-  </div>
-
-</ng-template>
+<p>The service is offered as a Video Consultation with Jyotishi Rahul Bali.</p>
 
 <div class="bttns">
-  <a href="https://calendly.com/rahulbaliastrology/kundli" class="bttn primary">Next</a>
+  <a href="Payment" class="bttn primary">Go to Payment</a>
+  <a [routerLink]="['/payment']" class="bttn secondary">Go to Payment</a>
 </div>
