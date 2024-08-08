@@ -12,7 +12,7 @@ export class PaymentComponent implements OnInit, OnDestroy {
   public remainingTime: string = '00:00';
   private endTime: Date = new Date(); // Initialize to current date
   private destroy$: Subject<boolean> = new Subject<boolean>();
-  qr = false;
+  loading = false;
 
   ngOnInit() {
     this.initializeTimer();
@@ -22,7 +22,7 @@ export class PaymentComponent implements OnInit, OnDestroy {
     
     // After 3 seconds, replace spinner with image
     setTimeout(() => {
-      this.qr = true;
+      this.loading = true;
     }, 3000);
 
     // Set the countdown duration (e.g., 5 minutes)
