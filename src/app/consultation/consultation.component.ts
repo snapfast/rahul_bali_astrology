@@ -1,18 +1,23 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Subject, timer } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 @Component({
   selector: 'consultation',
   templateUrl: './consultation.component.html',
   styleUrls: ['./consultation.component.css'],
+  imports: [MatProgressSpinnerModule],
 })
 export class ConsultationComponent implements OnInit, OnDestroy {
   public remainingTime: string = '00:00';
   private endTime: Date = new Date(); // Initialize to current date
   private destroy$: Subject<boolean> = new Subject<boolean>();
+  private qr: boolean = false;
 
   ngOnInit() {
+    await this.delay(3000);
+    this.qr = true;
     this.initializeTimer();
   }
 
@@ -50,6 +55,10 @@ export class ConsultationComponent implements OnInit, OnDestroy {
   ngOnDestroy() {
     this.destroy$.next(true);
     this.destroy$.complete();
+  }
+
+  delay(ms: number) {
+    return new Promise(resolve => setTimeout(resolve, ms));
   }
 }
 

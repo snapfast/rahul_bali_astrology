@@ -2,12 +2,20 @@
   With Vedic Jyotish, find Clarity and Purpose: Balancing your Goals with the Intricate Dance of Fate and Karma.
 </h3>
 
-<img src="https://raw.githubusercontent.com/snapfast/rahul_bali_astrology/main/src/app/img/PhonePeQR.png" width="300px">
+<div *ngIf="qr else loading">
 
-<div class="timer-container">
-  <h4>Time Left: {{ remainingTime }}</h4>
-  <p>Please scan QR code using any UPI app.</p><small>Add your email in the UPI remarks for tracking purpose.</small>
-  <p>Once payment done, click "Next" below for booking page.</p>
+  <img src="https://raw.githubusercontent.com/snapfast/rahul_bali_astrology/main/src/app/img/PhonePeQR.png"
+    width="300px">
+  <div class="timer-container">
+    <h4>Time Left: {{ remainingTime }}</h4>
+    <p>Please scan QR code using any UPI app.</p><small>Add your email in the UPI remarks for tracking purpose.</small>
+    <p>Once payment done, click "Next" below for booking page.</p>
+  </div>
+
+</div>
+
+<div>
+  <mat-spinner mode="indeterminate"></mat-spinner>
 </div>
 
 <div class="bttns">
