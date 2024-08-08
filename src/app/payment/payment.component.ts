@@ -13,6 +13,7 @@ export class PaymentComponent implements OnInit, OnDestroy {
   private endTime: Date = new Date(); // Initialize to current date
   private destroy$: Subject<boolean> = new Subject<boolean>();
   loading = true;
+  isProcessing = false;
 
   ngOnInit() {
     this.initializeTimer();
@@ -63,6 +64,19 @@ export class PaymentComponent implements OnInit, OnDestroy {
   delay(ms: number) {
     return new Promise(resolve => setTimeout(resolve, ms));
   }
+
+  handleContinue(): void {
+    this.isProcessing = true;  // Hide the button and show the spinner
+
+    // Redirect after 2 seconds
+    setTimeout(() => this.redirectToExternalLink(), 2000); // 2000ms = 2 seconds
+  }
+
+  private redirectToExternalLink(): void {
+    this.isProcessing = false; // Hide the spinner
+    window.location.href = 'https://calendly.com/rahulbaliastrology/kundli/';  // Replace with your external link
+  }
+
 }
 
 

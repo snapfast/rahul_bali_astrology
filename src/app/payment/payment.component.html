@@ -3,7 +3,10 @@
 </h3>
 
 <div *ngIf="loading; else qr">
-  <div class="lds-ripple"><div></div><div></div></div>
+  <div class="lds-ripple">
+    <div></div>
+    <div></div>
+  </div>
 </div>
 
 <ng-template #qr>
@@ -11,14 +14,31 @@
   <img src="https://raw.githubusercontent.com/snapfast/rahul_bali_astrology/main/src/app/img/PhonePeQR.png"
     width="300px">
   <div class="timer-container">
-    <h4>Time Left: {{ remainingTime }}</h4>
-    <p>Please scan QR code using any UPI app.</p><small>Add your email in the UPI remarks for tracking purpose.</small>
-    <p>Once payment done, click "Next" below for booking page.</p>
+    <h4 color="red">Time Left: {{ remainingTime }}</h4>
+    <p>Scan QR code using any UPI app.</p>
+    <small>Add your email in the UPI remarks for tracking purpose.</small>
   </div>
 
 </ng-template>
 
 <div class="bttns">
-  <a href="https://calendly.com/rahulbaliastrology/kundli" class="bttn primary">Book your time</a>
-  <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+  <!-- <a href="https://calendly.com/rahulbaliastrology/kundli" class="bttn primary">Book your time</a> -->
+
+  <a *ngIf="!isProcessing" (click)="handleContinue()">Continue to Booking Time</a>
+
+  <div *ngIf="isProcessing" class="spinner-overlay">
+    <div class="lds-roller">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
+  </div>
+
+
 </div>
