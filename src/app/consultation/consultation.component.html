@@ -2,7 +2,11 @@
   With Vedic Jyotish, find Clarity and Purpose: Balancing your Goals with the Intricate Dance of Fate and Karma.
 </h3>
 
-<div *ngIf="qr else loading">
+<div *ngIf="loading; else qr">
+  <mat-spinner mode="indeterminate"></mat-spinner>
+</div>
+
+<ng-template #qr>
 
   <img src="https://raw.githubusercontent.com/snapfast/rahul_bali_astrology/main/src/app/img/PhonePeQR.png"
     width="300px">
@@ -12,11 +16,7 @@
     <p>Once payment done, click "Next" below for booking page.</p>
   </div>
 
-</div>
-
-<div>
-  <mat-spinner mode="indeterminate"></mat-spinner>
-</div>
+</ng-template>
 
 <div class="bttns">
   <a href="https://calendly.com/rahulbaliastrology/kundli" class="bttn primary">Next</a>

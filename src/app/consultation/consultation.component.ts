@@ -13,15 +13,20 @@ export class ConsultationComponent implements OnInit, OnDestroy {
   public remainingTime: string = '00:00';
   private endTime: Date = new Date(); // Initialize to current date
   private destroy$: Subject<boolean> = new Subject<boolean>();
-  private qr: boolean = false;
+  qr = false;
 
   ngOnInit() {
-    await this.delay(3000);
-    this.qr = true;
     this.initializeTimer();
   }
 
   initializeTimer() {
+    this.qr = true;
+
+    // After 3 seconds, replace spinner with image
+    setTimeout(() => {
+      this.qr = false;
+    }, 3000);
+
     // Set the countdown duration (e.g., 5 minutes)
     const duration = 5 * 60 * 1000; // 5 minutes in milliseconds
     this.endTime = new Date(new Date().getTime() + duration);
