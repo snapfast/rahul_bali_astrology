@@ -1,4 +1,5 @@
 @import "./../../spinner.css"; /* Using a string */
+@import "./../../round_spinner.css"; /* Using a string */
 
 .timer-container {
     text-align: center;
