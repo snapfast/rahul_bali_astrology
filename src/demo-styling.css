@@ -58,12 +58,13 @@ body{
   font-weight: 500;
 }
 
-.content h3 {
-  line-height: 34px;
-  width: 50%;
+.content {
+  text-align: center;
+  line-height: 14px;
+  width: 60%;
   margin: 0 auto;
   padding-bottom: 5%;
-  font-weight: 500;
+  font-weight: 300;
 }
 
 @media only screen and (max-width: 450px) {
