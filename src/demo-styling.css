@@ -61,7 +61,7 @@ body{
 
 .body {
   text-align: center;
-  width: 60%;
+  /* width: 60%; */
   margin: 0 auto;
   padding-bottom: 5%;
   font-weight: 50;
