@@ -35,7 +35,7 @@ body{
   justify-content: space-evenly;
   align-items: center;
   margin: 0 auto;
-  max-width: 700px;
+  max-width: 1000px;
 }
 
 .header{
@@ -74,6 +74,12 @@ body{
     width: 90%;
     padding: 5%;
   }
+
+  .bttns {
+    display: flex;
+    flex-direction: column;
+  }
+
 }
 
 .bttns{
