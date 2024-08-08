@@ -1,13 +1,12 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Subject, timer } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
-import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+// import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 @Component({
   selector: 'payment',
   templateUrl: './payment.component.html',
   styleUrls: ['./payment.component.css'],
-  imports: [MatProgressSpinnerModule],
 })
 export class PaymentComponent implements OnInit, OnDestroy {
   public remainingTime: string = '00:00';
