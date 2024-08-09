@@ -54,6 +54,7 @@ export class PaymentComponent implements OnInit, OnDestroy {
   handleTimeUp() {
     alert('Time is up! Redirectly to previous page.');
     // You can add any additional logic here, such as redirecting or displaying a message
+    this.handleContinue();
   }
 
   ngOnDestroy() {
